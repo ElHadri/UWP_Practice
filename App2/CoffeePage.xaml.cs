@@ -10,7 +10,9 @@ namespace App2
     /// </summary>
     public sealed partial class CoffeePage : Page
     {
-        private bool _isRoast;
+        private string _roast;
+        private string _sweetener;
+        private string _cream;
 
         public CoffeePage()
         {
@@ -19,55 +21,45 @@ namespace App2
 
         private void RoastMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
         {
-            switch (((MenuFlyoutItem)sender).Name)
-            {
-                case "None_RoastMenuFlyoutItem":
-                    //CoffeeChoices.Text = "None";
-                    _isRoast = false;
-                    break;
-                case "Dark_RoastMenuFlyoutItem":
-                    CoffeeChoices.Text = "Dark";
-                    _isRoast = true;
-                    break;
-                case "Medium_RoastMenuFlyoutItem":
-                    CoffeeChoices.Text = "Medium";
-                    _isRoast = true;
-                    break;
-            }
+            _roast = ((MenuFlyoutItem)sender).Text;
+            _display();
+
         }
 
         private void SweetenerMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
         {
-            if (_isRoast)
-            {
-                switch (((MenuFlyoutItem)sender).Name)
-                {
-                    case "None_SweetenerMenuFlyoutItem":
-                        //CoffeeChoices.Text += ", None";
-                        break;
-                    case "Sugar_SweetenerMenuFlyoutItem":
-                        CoffeeChoices.Text += ", Sugar";
-                        break;
-                }
-            }
+            _sweetener = ((MenuFlyoutItem)sender).Text;
+            _display();
+
         }
 
         private void CreamMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
         {
-            if (_isRoast)
+            _cream = ((MenuFlyoutItem)sender).Text;
+            _display();
+
+        }
+
+        private void _display()
+        {
+            if (_roast == "None" || string.IsNullOrEmpty(_roast))
             {
-                switch (((MenuFlyoutItem)sender).Name)
-                {
-                    case "None_CreamMenuFlyoutItem":
-                        //CoffeeChoices.Text += ", None";
-                        break;
-                    case "TwoPerCentMilk_CreamMenuFlyoutItem":
-                        CoffeeChoices.Text += ", 2% Milk";
-                        break;
-                    case "WholeMilk_CreamMenuFlyoutItem":
-                        CoffeeChoices.Text += ", Whole Milk";
-                        break;
-                }
+                CoffeeChoices.Text = "None";
+                _sweetener = "";
+                _cream = "";
+                return;
+            }
+
+            CoffeeChoices.Text = _roast;
+
+            if (_sweetener != "None" && !string.IsNullOrEmpty(_sweetener))
+            {
+                CoffeeChoices.Text += " + " + _sweetener;
+            }
+
+            if (_cream != "None" && !string.IsNullOrEmpty(_cream))
+            {
+                CoffeeChoices.Text += " + " + _cream;
             }
         }
     }

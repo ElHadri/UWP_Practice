@@ -9,21 +9,20 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="Green">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200*"/>
-            <RowDefinition Height="200*"/>
-            <RowDefinition Height="271*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Source="Assets/Custom/white-logo.png" HorizontalAlignment="Left" Margin="40,0,0,0" Width="324"/>
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <TextBlock Text="Pickup:" FontSize="28" VerticalAlignment="Bottom" Margin="40,0,0,0" Width="110"/>
-            <CalendarDatePicker PlaceholderText="Select a date" VerticalAlignment="Bottom" />
-        </StackPanel>
-        <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <TextBlock Text="" FontSize="28" VerticalAlignment="Center" Margin="40,0,0,10" Width="110"/>
-            <TimePicker VerticalAlignment="Top" Margin="0,20,0,0"/>
-        </StackPanel>
+        <Image Style="{StaticResource WhiteLogoStyle}"/>
+        <TextBlock Grid.Row="1" Text="Pickup:" Style="{StaticResource LabelTextBlockStyle}"/>
+        <CalendarDatePicker Grid.Row="1" Grid.Column="1" PlaceholderText="Select a date"/>
+        <TimePicker Grid.Row="2" Grid.Column="1"/>
     </Grid>
 </Page>
 

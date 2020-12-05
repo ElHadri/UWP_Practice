@@ -11,6 +11,22 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>-->
+    <Application.Resources>
+        <Style TargetType="Image" x:Key="WhiteLogoStyle">
+            <Setter Property="Source" Value="Assets/Custom/white-logo.png" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="Margin" Value="40,0,0,0" />
+            <Setter Property="Width" Value="324" />
+        </Style>
+        <Style TargetType="TextBlock" x:Key="LabelTextBlockStyle">
+            <Setter Property="FontSize" Value="28" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="40,0,0,10" />
+            <Setter Property="Width" Value="400" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+    </Application.Resources>
+    
 
 
 </Application>

@@ -7,55 +7,54 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style TargetType="Button" x:Key="CoffeeOptionsButtonStyle">
+            <Setter Property="FontSize" Value="28" />
+            <Setter Property="Margin" Value="20,0,20,0" />
+            <Setter Property="Background" Value="#FF341B1B" />
+            <Setter Property="Foreground" Value="WhiteSmoke" />
+        </Style>
+    </Page.Resources>
 
     <Grid Background="#3C1F19">
         <Grid.RowDefinitions>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200*"/>
-            <RowDefinition Height="200*"/>
-            <RowDefinition Height="271*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Source="Assets/Custom/white-logo.png" HorizontalAlignment="Left" Margin="40,0,0,0" Width="324"/>
+        <Image Style="{StaticResource WhiteLogoStyle}"/>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            
-            <Button Content="Roast" FontSize="28" Margin="20,0,20,0" Background="#FF341B1B">
+            <Button Content="Roast" Style="{StaticResource CoffeeOptionsButtonStyle}">
                 <Button.Flyout>
                     <MenuFlyout>
-                        <MenuFlyoutItem Name="None_RoastMenuFlyoutItem" Text="None" Click="RoastMenuFlyoutItem_Click"/>
-                        <MenuFlyoutItem Name="Dark_RoastMenuFlyoutItem" Text="Dark" Click="RoastMenuFlyoutItem_Click"/>
-                        <MenuFlyoutItem Name="Medium_RoastMenuFlyoutItem" Text="Medium" Click="RoastMenuFlyoutItem_Click"/>
+                        <MenuFlyoutItem Text="None" Click="RoastMenuFlyoutItem_Click"/>
+                        <MenuFlyoutItem Text="Dark" Click="RoastMenuFlyoutItem_Click"/>
+                        <MenuFlyoutItem Text="Medium" Click="RoastMenuFlyoutItem_Click"/>
                     </MenuFlyout>
                 </Button.Flyout>
             </Button>
-
-            <Button Content="Sweetener" FontSize="28" Margin="20,0,20,0" Background="#FF341B1B">
+            <Button Content="Sweetener" Style="{StaticResource CoffeeOptionsButtonStyle}">
                 <Button.Flyout>
                     <MenuFlyout>
-                        <MenuFlyoutItem Name="None_SweetenerMenuFlyoutItem" Text="None" Click="SweetenerMenuFlyoutItem_Click"/>
-                        <MenuFlyoutItem Name="Sugar_SweetenerMenuFlyoutItem" Text="Sugar" Click="SweetenerMenuFlyoutItem_Click"/>
+                        <MenuFlyoutItem Text="None" Click="SweetenerMenuFlyoutItem_Click"/>
+                        <MenuFlyoutItem Text="Sugar" Click="SweetenerMenuFlyoutItem_Click"/>
                     </MenuFlyout>
                 </Button.Flyout>
             </Button>
-
-
-
-
-            <Button Content="Cream" FontSize="28" Margin="20,0,20,0" Background="#FF341B1B">
+            <Button Content="Cream" Style="{StaticResource CoffeeOptionsButtonStyle}">
                 <Button.Flyout>
                     <MenuFlyout>
-                        <MenuFlyoutItem Name="None_CreamMenuFlyoutItem" Text="None" Click="CreamMenuFlyoutItem_Click"/>
-                        <MenuFlyoutItem Name="TwoPerCentMilk_CreamMenuFlyoutItem" Text="2% Milk" Click="CreamMenuFlyoutItem_Click"/>
-                        <MenuFlyoutItem Name="WholeMilk_CreamMenuFlyoutItem" Text="Whole Milk" Click="CreamMenuFlyoutItem_Click"/>
+                        <MenuFlyoutItem Text="None" Click="CreamMenuFlyoutItem_Click"/>
+                        <MenuFlyoutItem Text="2% Milk" Click="CreamMenuFlyoutItem_Click"/>
+                        <MenuFlyoutItem Text="Whole Milk" Click="CreamMenuFlyoutItem_Click"/>
                     </MenuFlyout>
                 </Button.Flyout>
             </Button>
-
-
-
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <TextBlock Text="Coffee:" FontSize="28" Margin="40,0,0,0"/>
-            <TextBlock Name="CoffeeChoices" FontSize="28" Margin="40,0,0,0"/>
+            <TextBlock Text="Coffee:" Style="{StaticResource LabelTextBlockStyle}"/>
+            <TextBlock Name="CoffeeChoices" Style="{StaticResource LabelTextBlockStyle}"/>
         </StackPanel>
     </Grid>
 

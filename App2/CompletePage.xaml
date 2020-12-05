@@ -10,10 +10,10 @@
 
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Source="Assets/Custom/color-logo.png" HorizontalAlignment="Left" Margin="40,0,0,0" Width="324"/>
+        <Image Source="Assets/Custom/color-logo.png" Style="{StaticResource WhiteLogoStyle}"/>
         <Image Grid.Row="1" Source="Assets/Custom/ticket.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,30,0,30" />
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Order" FontSize="70" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" />

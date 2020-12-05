@@ -10,19 +10,19 @@
 
     <Grid Background="red">
         <Grid.RowDefinitions>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200*"/>
-            <RowDefinition Height="200*"/>
-            <RowDefinition Height="271*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Source="Assets/Custom/white-logo.png" HorizontalAlignment="Left" Margin="40,0,0,0" Width="324"/>
+        <Image Style="{StaticResource WhiteLogoStyle}"/>
         <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <TextBlock Text="Original Glazed Count:" FontSize="28" VerticalAlignment="Center" Margin="40,0,0,10" Width="350"/>
-            <Slider Width="200" Minimum="0" Maximum="24" VerticalAlignment="Center"/>
+            <TextBlock Text="Original Glazed Count:" Style="{StaticResource LabelTextBlockStyle}"/>
+            <Slider Width="200" Maximum="24" VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <TextBlock Text="Speedway Special Count:" FontSize="28" VerticalAlignment="Center" Margin="40,0,0,10" Width="350"/>
-            <Slider Width="200" Minimum="0" Maximum="24" VerticalAlignment="Center"/>
+            <TextBlock Text="Speedway Special Count:" Style="{StaticResource LabelTextBlockStyle}"/>
+            <Slider Width="200" Maximum="24" VerticalAlignment="Center"/>
         </StackPanel>
     </Grid>
     
