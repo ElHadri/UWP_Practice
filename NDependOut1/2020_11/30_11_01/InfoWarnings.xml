@@ -5,14 +5,14 @@
   <Info>Output directory resolved to absolute directory path: C:\Users\Adil\Source\Repos\AdilSolution\NDependOut1</Info>
   <Info>.NET Assemblies resolved from the Visual Studio solution file {C:\Users\Adil\Source\Repos\AdilSolution\AdilSolution.sln}
    C:\Users\Adil\Source\Repos\AdilSolution\AdilProject\bin\x86\Debug\AdilProject.exe
-   C:\Users\Adil\Source\Repos\AdilSolution\App1\bin\x86\Debug\App1.exe</Info>
+   C:\Users\Adil\Source\Repos\AdilSolution\Hamburger_SplitView\bin\x86\Debug\Hamburger_SplitView.exe</Info>
   <Info>No .NET Assembly filtered out from the Visual Studio solution file {C:\Users\Adil\Source\Repos\AdilSolution\AdilSolution.sln}.</Info>
   <Info>Concurrent mode</Info>
   <Info>.NET Assemblies loaded from {C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319} 
    System.Runtime.InteropServices.WindowsRuntime.dll   v4.0.0.0
    System.Diagnostics.Debug.dll   v4.0.0.0
    System.Diagnostics.Tools.dll   v4.0.0.0</Info>
-  <Warning>Assembly {Windows.Foundation.UniversalApiContract} is referenced by {AdilProject} and {App1} but is not found.
+  <Warning>Assembly {Windows.Foundation.UniversalApiContract} is referenced by {AdilProject} and {Hamburger_SplitView} but is not found.
 To resolve such warning you can append the assembly directory in NDepend Project Properties &gt; Code to Analyze &gt; Directories that contains .NET assemblies to analyze</Warning>
   <Info>14 source files parsed ; all source files found ; all source files in-sync with PDB</Info>
   <Info>0 code rule has been extracted from code.</Info>
